@@ -1,0 +1,10 @@
+package com.aurion.di.violation.model;
+
+public class DBLocker {
+    
+	
+	public void dbLocker(String message) {
+		
+		System.out.println(message);
+	}
+}

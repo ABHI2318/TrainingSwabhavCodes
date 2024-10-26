@@ -1,0 +1,20 @@
+package com.aurion.AbstractBank.model;
+
+public class SavingAccount implements IAccount {
+
+	
+	
+
+	@Override
+	public void credit(double amount) {
+		System.out.println("the money credit in credit account is "+amount);
+		
+	}
+
+	@Override
+	public void debit(double amount) {
+		System.out.println("the money debit in savinf account is "+amount);
+		
+	}
+
+}

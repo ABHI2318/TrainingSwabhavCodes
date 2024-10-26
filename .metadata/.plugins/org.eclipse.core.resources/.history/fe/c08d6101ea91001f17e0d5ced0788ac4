@@ -1,0 +1,5 @@
+package com.aurion.decorator.model;
+
+public class OilChange {
+
+}

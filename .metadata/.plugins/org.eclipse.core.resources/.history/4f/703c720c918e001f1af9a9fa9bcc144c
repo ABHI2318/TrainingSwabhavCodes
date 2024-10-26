@@ -1,0 +1,16 @@
+package com.aurion.test;
+
+import com.aurion.model.Cat;
+import com.aurion.model.Dog;
+
+public class AnimalTest {
+
+	public static void main(String[] args) {
+		Dog dog=new Dog();
+		dog.sleep();
+		Cat cat=new Cat();
+		cat.eat();
+
+	}
+
+}

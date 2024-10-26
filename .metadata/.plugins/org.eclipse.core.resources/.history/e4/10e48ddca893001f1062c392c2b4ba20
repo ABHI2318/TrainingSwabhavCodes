@@ -1,0 +1,15 @@
+package com.aurion.strategy.model;
+
+public class Paymentcontext {
+	private IPaymentStrategy strategy;
+
+	public setPaymentstrategy(IPaymentStrategy strategy) {
+		super();
+		this.strategy = strategy;
+	}
+	public void makepayment(int amount) {
+		strategy.pay(amount);
+		
+	}
+
+}

@@ -1,0 +1,6 @@
+package com.aurion.model;
+
+public interface Animal {
+  
+	void sleep();
+	public abstract void eat();

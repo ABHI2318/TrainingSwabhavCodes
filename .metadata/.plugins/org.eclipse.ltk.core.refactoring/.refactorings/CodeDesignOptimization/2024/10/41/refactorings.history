@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.aurion.pigdice&apos; to &apos;com.aurion.Design&apos;&#x0D;&#x0A;- Original project: &apos;CodeDesignOptimization&apos;&#x0D;&#x0A;- Original element: &apos;CodeDesignOptimization/src/com.aurion.pigdice&apos;&#x0D;&#x0A;- Renamed element: &apos;CodeDesignOptimization/src/com.aurion.Design&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.aurion.pigdice&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.aurion.pigdice" name="com.aurion.Design" qualified="false" references="true" stamp="1728195649810" textual="false" version="1.0"/>
+</session>

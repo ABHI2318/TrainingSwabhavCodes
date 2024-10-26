@@ -1,0 +1,17 @@
+package com.aurion.AbstractBank.model;
+
+public class CurrentAccount implements IAccount{
+
+	@Override
+	public void credit(double amount) {
+	System.out.println("the amount credit in currentaccount us "+amount);
+		
+	}
+
+	@Override
+	public void debit(double amount) {
+		System.out.println("the amount debit in currentaccount is "+amount);
+		
+	}
+
+}

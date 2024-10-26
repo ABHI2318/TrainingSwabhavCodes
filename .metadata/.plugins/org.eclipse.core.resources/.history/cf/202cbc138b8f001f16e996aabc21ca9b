@@ -1,0 +1,5 @@
+package com.aurion.ocp.violation.model;
+
+public class FixedDeposit {
+
+}

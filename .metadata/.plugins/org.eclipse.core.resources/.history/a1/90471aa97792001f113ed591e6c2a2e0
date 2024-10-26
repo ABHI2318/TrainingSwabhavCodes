@@ -1,0 +1,5 @@
+package com.aurion.composite.model;
+
+public class Composite {
+
+}

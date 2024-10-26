@@ -1,0 +1,17 @@
+package com.aurion.model.Factory.model;
+
+public class CarFactory {
+	ICar car;
+	public static ICar makeCar(CarType type) {
+		
+		if(type==CarType.maruti)
+			car=new maruti();
+		if(type==CarType.mahindra()
+			car=new mahindra();
+		if(type==CarType.tata()
+			car=new tata();
+		
+	}
+
+}
+}

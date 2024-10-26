@@ -1,0 +1,23 @@
+package com.aurion.state.model;
+
+public class NewOrderState implements IOrderState{
+
+	@Override
+	public void next(OrderContext ordercontext) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void previous(OrderContext ordercontext) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void printstatus() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

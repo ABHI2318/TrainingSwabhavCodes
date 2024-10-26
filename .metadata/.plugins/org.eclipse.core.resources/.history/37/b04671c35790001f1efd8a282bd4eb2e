@@ -1,0 +1,5 @@
+package com.aurion.di.violation.model;
+
+public class DBLocker {
+
+}

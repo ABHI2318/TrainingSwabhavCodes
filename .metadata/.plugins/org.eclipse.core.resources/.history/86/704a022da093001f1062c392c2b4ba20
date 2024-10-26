@@ -1,0 +1,5 @@
+package com.aurion.strategy.model;
+
+public class Paypal {
+
+}

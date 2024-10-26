@@ -1,0 +1,14 @@
+package com.aurion.facade.Account.model;
+
+public class Snippet {
+	public static void main(String[] args) {
+		/_10_DesignPattern/src/com/aurion/AbstarctBank/test/BankApp.java
+		/_10_DesignPattern/src/com/aurion/AbstractBank/model/CreateCurrentAccount.java
+		/_10_DesignPattern/src/com/aurion/AbstractBank/model/CreateSavingAccount.java
+		/_10_DesignPattern/src/com/aurion/AbstractBank/model/CurrentAccount.java
+		/_10_DesignPattern/src/com/aurion/AbstractBank/model/IAccount.java
+		/_10_DesignPattern/src/com/aurion/AbstractBank/model/IAccountFactory.java
+		/_10_DesignPattern/src/com/aurion/AbstractBank/model/SavingAccount.java
+	}
+}
+

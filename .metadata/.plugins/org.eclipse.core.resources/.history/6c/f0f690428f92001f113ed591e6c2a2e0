@@ -1,0 +1,23 @@
+package com.aurion.Hatdecorator.model;
+
+public class GoldenHat extends HatDecorator {
+
+    public GoldenHat(IHat hat) {
+        this.hat = hat; // Explicitly assign the decorated object
+    }
+
+    @Override
+    public String getName() {
+        return hat.getName() + " with golden embellishments";
+    }
+
+    @Override
+    public int getPrice() {
+        return hat.getPrice() + 500; // Adding the golden hat's price
+    }
+
+    @Override
+    public String getDescription() {
+        return hat.getDescription() + " Enhanced with a golden touch.";
+    }
+}

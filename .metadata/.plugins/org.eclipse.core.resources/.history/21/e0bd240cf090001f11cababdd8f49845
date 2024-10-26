@@ -1,0 +1,11 @@
+package com.aurion.test;
+
+import com.aurion.model.BuilderPatternmodel;
+
+public class BuilderTest {
+
+	public static void main(String[] args) {
+		BuilderPatternmodel phone=new BuilderPatternmodel("android","qulcom",1,33.5,3000);
+	}
+
+}

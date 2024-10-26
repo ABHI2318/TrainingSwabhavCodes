@@ -1,0 +1,5 @@
+package com.aurion.state.model;
+
+public interface IOrderState {
+
+}

@@ -1,0 +1,10 @@
+package com.aurion.facade.Account.model;
+
+public class FacadeAccountManager {
+  public void getSavingAccount() {
+	  IAccountFactory savingaccount=new CreateSavingAccount();
+	  IAccount account=savingaccount.makeaccount();
+	  account.credit(34);
+	  account.debit(23);
+  }
+}

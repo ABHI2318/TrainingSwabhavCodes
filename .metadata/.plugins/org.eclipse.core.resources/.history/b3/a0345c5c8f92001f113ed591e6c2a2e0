@@ -1,0 +1,13 @@
+package com.aurion.Hatdecorator.test;
+
+import com.aurion.Hatdecorator.model.GoldenHat;
+import com.aurion.Hatdecorator.model.IHat;
+
+public class Hatmain {
+
+	public static void main(String[] args) {
+		IHat goldenhat=new GoldenHat(null);
+		System.out.println(goldenhat);
+	}
+
+}

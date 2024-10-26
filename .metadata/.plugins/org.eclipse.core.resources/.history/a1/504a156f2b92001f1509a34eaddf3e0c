@@ -1,0 +1,15 @@
+package com.aurion.decorator.test;
+
+import com.aurion.decorator.model.CarInspectionService;
+import com.aurion.decorator.model.ICarService;
+import com.aurion.decorator.model.CarInspectionService;
+
+public class CarTest {
+
+	public static void main(String[] args) {
+	ICarService baseservice=new CarInspectionService();
+		System.out.println(baseservice.getCost());
+		
+	}
+
+}

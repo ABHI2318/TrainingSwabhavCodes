@@ -1,0 +1,24 @@
+package com.aurion.di.violation.model;
+
+public class TaxCalculator {
+	private DBLocker logger;
+	
+	public TaxCalculator() {
+		super();
+		this.logger=new DBLocker();
+	}
+	
+	public int calculateTax(int amount ,int rate) {
+	   int tax=1;
+	   
+	   try {
+		   tax=amount/rate;
+	   }
+	   catch(ArithmeticException exception) {
+		   logger.log("divide by zero");
+		   
+	   }
+	 return tax;
+	}
+
+}

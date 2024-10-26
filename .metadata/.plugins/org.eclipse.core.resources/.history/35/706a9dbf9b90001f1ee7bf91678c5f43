@@ -1,0 +1,44 @@
+package com.aurion.di.violation.model;
+
+import com.aurion.di.solution.model.DBlogger;
+
+public class TaxCalculator {
+	private DBLocker logger;
+	
+	
+	
+	public TaxCalculator(DBLocker dblogger) {
+		super();
+		this.logger = logger;
+	}
+
+
+
+	public TaxCalculator(DBlogger dBlogger) {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+	public int calculateTax(int amount ,int rate) {
+	   int tax=1;
+	   
+	   try {
+		   tax=amount/rate;
+		   System.out.println("tax ix "+tax);
+	   }
+	   catch(ArithmeticException exception) {
+		   logger.log("divide by zero");
+		   
+	   }
+	 return tax;
+	}
+
+
+
+	public void taxcalculate() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

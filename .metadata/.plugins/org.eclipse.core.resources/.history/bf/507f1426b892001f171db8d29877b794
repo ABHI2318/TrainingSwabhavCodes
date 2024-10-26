@@ -1,0 +1,5 @@
+package com.aurion.observer.model;
+
+public class WhatsappNotifier {
+
+}

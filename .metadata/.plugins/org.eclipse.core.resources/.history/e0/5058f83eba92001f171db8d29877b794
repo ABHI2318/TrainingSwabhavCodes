@@ -1,0 +1,11 @@
+package com.aurion.observer.model;
+
+public class WhatsappNotifier implements INotifier {
+
+	@Override
+	public void getNotification(Account account, double amount, String message) {
+		System.out.println();
+		
+	}
+
+}

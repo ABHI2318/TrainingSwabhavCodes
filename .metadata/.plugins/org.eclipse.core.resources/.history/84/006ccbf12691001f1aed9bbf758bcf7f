@@ -1,0 +1,5 @@
+package com.aurion.AbstractBank.model;
+
+public class CreateCurrentAccount {
+
+}

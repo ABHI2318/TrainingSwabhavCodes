@@ -1,0 +1,21 @@
+package com.aurion.di.solution.model;
+
+public class TaxCalculator {
+	private DBlogger dblogger;
+	private Filelogger filelogger;
+	
+	public int calculateTax(int amount ,int rate) {
+		   int tax=1;
+		   
+		   try {
+			   tax=amount/rate;
+			   System.out.println("tax ix "+tax);
+		   }
+		   catch(ArithmeticException exception) {
+			   dblogger.logger("divide by zero");
+			   filelogger.logger("logged into file");
+			   
+		   }
+		 return tax;
+
+}}

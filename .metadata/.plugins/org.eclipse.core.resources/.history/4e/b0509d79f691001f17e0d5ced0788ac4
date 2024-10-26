@@ -1,0 +1,6 @@
+package com.aurion.adapter.model;
+
+public abstract class HatAdapter implements IItem {
+	Hat hat=new Hat("virat", "puma", 36, 2);
+
+}

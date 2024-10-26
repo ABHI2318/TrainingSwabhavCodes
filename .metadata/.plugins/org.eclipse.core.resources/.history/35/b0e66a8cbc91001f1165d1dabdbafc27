@@ -1,0 +1,40 @@
+package com.aurion.model;
+
+import com.aurion.model.IContactManager;
+import com.aurion.model.IUserManager;
+import com.aurion.model.User;
+import com.aurion.test.App;
+
+public class ContactManagementFacade {
+    private IUserManager userManager;
+    private IContactManager contactManager;
+
+    public ContactManagementFacade(IUserManager userManager, IContactManager contactManager) {
+        this.userManager = userManager;
+        this.contactManager = contactManager;
+    }
+
+    public void addUserDetails() {
+        userManager.addUserDetails();
+    }
+
+    public User selectUser() {
+        return userManager.selectUser();
+    }
+
+    public void displayContacts(User user) {
+        userManager.displayContacts(user);
+    }
+
+    public void manageUserContacts(User user) {
+        contactManager.manageUserContacts(user);
+    }
+    
+    public void addContact(User user) {
+        contactManager.addContact(user);
+    }
+
+    public void removeContact(User user) {
+        contactManager.removeContact(user);
+    }
+}

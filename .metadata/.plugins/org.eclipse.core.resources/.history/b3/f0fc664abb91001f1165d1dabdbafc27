@@ -1,0 +1,83 @@
+package com.aurion.test;
+
+import com.aurion.model.ContactManagementFacade;
+import com.aurion.model.IContactManager;
+import com.aurion.model.IUserManager;
+import com.aurion.model.User;
+import java.util.Scanner;
+
+public class App implements IUserManager, IContactManager {
+
+    private static Scanner scanner = new Scanner(System.in);
+    private static ContactManagementFacade facade;
+
+    public static void main(String[] args) {
+        App app = new App();
+        facade = new ContactManagementFacade(app, app);
+        app.addUserDetails();
+        app.manageContactsApp();
+    }
+
+    private void manageContactsApp() {
+        boolean continueApp = true;
+
+        while (continueApp) {
+            User selectedUser = facade.selectUser();
+            if (selectedUser == null) {
+                continueApp = false;
+                break;
+            }
+
+            facade.manageUserContacts(selectedUser);
+
+            System.out.print("Do you want to exit the application? (y/n): ");
+            if (scanner.next().equalsIgnoreCase("y")) {
+                continueApp = false;
+            }
+        }
+    }
+
+	@Override
+	public void addContact(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeContact(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateContact(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void manageUserContacts(User selectedUser) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addUserDetails() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public User selectUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void displayContacts(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+    // IUserManager and IContactManager methods remain unchanged, now they are used internally by the facade
+}

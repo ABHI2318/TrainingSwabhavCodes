@@ -1,0 +1,6 @@
+package com.aurion.di.solution.model;
+
+public interface IDBlogger {
+  public void logger(String message);
+
+}

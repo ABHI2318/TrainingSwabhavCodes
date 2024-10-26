@@ -1,0 +1,29 @@
+package com.aurion.model;
+
+public class Prototype implements IPrototype {
+    private String name;
+
+    public Prototype(String name) {
+        super();
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Corrected clone method
+    @Override
+    public IPrototype clone() {
+        return new Prototype(this.name); // Return a new instance of Prototype
+    }
+
+    @Override
+    public void prototype() {
+        // Implement the method as required by IPrototype interface (if needed)
+    }
+}

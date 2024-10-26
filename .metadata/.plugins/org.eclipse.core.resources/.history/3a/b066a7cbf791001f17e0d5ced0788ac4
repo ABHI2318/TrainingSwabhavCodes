@@ -1,0 +1,17 @@
+package com.aurion.adapter.test;
+
+import com.aurion.adapter.model.Biscuit;
+import com.aurion.adapter.model.HatAdapter;
+import com.aurion.adapter.model.IItem;
+
+public class shoppingcart {
+
+	public static void main(String[] args) {
+		IItem buscuit=new Biscuit("parleG", 300);
+	System.out.println(buscuit.getName());
+	
+	IItem hatadaptor=new HatAdapter();
+	System.out.println(hatadaptor);
+	}
+
+}

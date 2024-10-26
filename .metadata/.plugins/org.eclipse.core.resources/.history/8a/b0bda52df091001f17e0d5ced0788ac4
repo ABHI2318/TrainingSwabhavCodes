@@ -1,0 +1,11 @@
+package com.aurion.decorator.model;
+
+public class OilChange extends CarServiceDecorator{
+  ICarService carservice;
+	@Override
+	public double getCost() {
+		
+		return 500;
+	}
+
+}

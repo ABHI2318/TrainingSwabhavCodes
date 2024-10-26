@@ -1,0 +1,10 @@
+package com.aurion.srp.solution.test;
+
+public class TestTAX {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

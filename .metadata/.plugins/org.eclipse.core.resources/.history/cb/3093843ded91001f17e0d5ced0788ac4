@@ -1,0 +1,8 @@
+package com.aurion.decorator.model;
+
+public class carservice
+ {
+	static int cost;
+	ICarService carservice=new CarInspectionService();
+
+}

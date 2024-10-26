@@ -1,0 +1,17 @@
+package com.aurion.decorator.model;
+
+public class WheelAlignment extends CarServiceDecorator{
+	 ICarService carservice;
+
+	public WheelAlignment(ICarService carservice) {
+		super(carservice);
+		this.carservice = carservice;
+	}
+
+	@Override
+	public double getCost() {
+		
+		return super.getCost()+1500;
+	}
+
+}

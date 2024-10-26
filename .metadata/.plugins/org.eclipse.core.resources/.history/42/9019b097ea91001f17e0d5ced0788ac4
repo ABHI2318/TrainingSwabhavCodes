@@ -1,0 +1,10 @@
+package com.aurion.decorator.model;
+
+public abstract class CarServiceDecorator implements ICarService{
+
+	
+	public abstract double getCost() ;{
+	
+	}
+
+}

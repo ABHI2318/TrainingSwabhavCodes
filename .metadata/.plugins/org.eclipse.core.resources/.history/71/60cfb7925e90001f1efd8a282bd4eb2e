@@ -1,0 +1,14 @@
+package com.aurion.di.solution.test;
+
+import com.aurion.di.violation.model.TaxCalculator;
+
+public class Test {
+
+	public static void main(String[] args) {
+		TaxCalculator taxcal=new TaxCalculator();
+          taxcal.calculateTax(23, 0);
+          System.out.println(taxcal);
+
+	}
+
+}

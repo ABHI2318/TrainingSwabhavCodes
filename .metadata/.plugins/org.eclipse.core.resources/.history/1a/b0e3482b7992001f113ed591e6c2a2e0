@@ -1,0 +1,11 @@
+package com.aurion.composite.model;
+
+public class Composite implements IComponent {
+
+	@Override
+	public void showPrice() {
+		
+		
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.aurion.test;
+
+import com.aurion.model.Animal;
+import com.aurion.model.Cat;
+import com.aurion.model.Dog;
+
+public class AnimalTest {
+
+	public static void main(String[] args) {
+		Dog dog=new Dog();
+		dog.sleep();
+		Cat cat=new Cat();
+		cat.eat();
+		System.out.println(Animal.Max_age);//casn access via animal as well
+		System.out.println(Dog.Max_age);//can acess via 
+		Animal.info();
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.aurion.model;
+
+public class Protype {
+	private String name;
+
+	public Protype(String name) {
+		super();
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+}

@@ -1,0 +1,5 @@
+package com.aurion.model.AbstarctFactory.model;
+
+public enum CarType {
+maruti,tata,mahindra
+}

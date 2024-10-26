@@ -1,0 +1,23 @@
+package com.aurion.Hatdecorator.model;
+
+public class PremiumHat implements IHat{
+
+	@Override
+	public void getName(String name) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getPrice(int price) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void getDescription(String desciption) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

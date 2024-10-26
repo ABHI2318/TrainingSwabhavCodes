@@ -1,0 +1,9 @@
+package com.aurion.decorator.test;
+
+public class CarTest {
+
+	public static void main(String[] args) {
+		ICarService carservice=new CarInspectionService();
+	}
+
+}

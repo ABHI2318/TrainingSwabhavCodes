@@ -1,0 +1,29 @@
+package com.aurion.Hatdecorator.model;
+
+public class RibbonedHat extends HatDecorator{
+
+	public RibbonedHat(IHat hat) {
+		
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return "aditya";
+	}
+
+	@Override
+	public int getPrice() {
+		// TODO Auto-generated method stub
+		return 400;
+	}
+
+	@Override
+	public String getDescription() {
+		// TODO Auto-generated method stub
+		return "ribboned hat is best";
+	}
+
+	
+}

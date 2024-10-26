@@ -1,0 +1,12 @@
+package com.aurion.decorator.test;
+
+import com.aurion.decorator.model.carservice;
+
+public class CarTest {
+
+	public static void main(String[] args) {
+		carservice service=new carservice();
+		System.out.println(service.getOilchange());
+	}
+
+}

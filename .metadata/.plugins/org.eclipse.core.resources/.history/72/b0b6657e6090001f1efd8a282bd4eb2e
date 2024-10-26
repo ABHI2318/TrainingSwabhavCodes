@@ -1,0 +1,11 @@
+package com.aurion.di.solution.model;
+
+public class DBlogger implements IDBlogger{
+
+	@Override
+	public void logger(String message) {
+		System.out.println(message);
+		
+	}
+
+}

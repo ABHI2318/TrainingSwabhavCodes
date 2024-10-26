@@ -1,0 +1,6 @@
+package com.aurion.AbstarctFactory.model;
+
+public interface ICarFactory {
+	public com.aurion.model.Factory.model.ICar make();
+
+}

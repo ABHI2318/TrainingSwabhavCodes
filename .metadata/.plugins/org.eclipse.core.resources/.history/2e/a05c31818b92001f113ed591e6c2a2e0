@@ -1,8 +1,0 @@
-package com.aurion.Hatdecorator.model;
-
-public interface IHat {
-	public void getName(String name);
-	public void getPrice(int price);
-	public void getDescription(String desciption);
-
-}

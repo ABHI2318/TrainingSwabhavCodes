@@ -1,7 +1,0 @@
-package com.aurion.model.AbstarctFactory.model;
-
-public interface ICar {
-	public void start();
-	public void stop();
-
-}

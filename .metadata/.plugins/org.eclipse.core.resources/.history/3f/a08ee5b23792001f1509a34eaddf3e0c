@@ -1,6 +1,0 @@
-package com.aurion.proxy.model;
-
-public interface DatabaseExecuter {
-	public void executeDataBase(String query);
-
-}

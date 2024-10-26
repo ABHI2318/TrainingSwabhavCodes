@@ -1,9 +1,0 @@
-package com.aurion.isp.solution.model;
-
-public interface IRobot {
-	
-	public void charge();
-	public void startwork();
-	public void stopwork();
-
-}

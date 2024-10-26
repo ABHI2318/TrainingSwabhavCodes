@@ -1,6 +1,0 @@
-package com.aurion.model.AbstarctFactory.model;
-
-public interface ICarFactory {
-	public 
-
-}

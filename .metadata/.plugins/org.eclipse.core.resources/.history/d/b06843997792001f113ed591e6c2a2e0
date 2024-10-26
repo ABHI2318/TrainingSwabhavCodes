@@ -1,5 +1,0 @@
-package com.aurion.composite.model;
-
-public interface IComponent {
-
-}

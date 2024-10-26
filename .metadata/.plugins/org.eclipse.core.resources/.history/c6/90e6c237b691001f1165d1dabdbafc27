@@ -1,7 +1,0 @@
-package com.aurion.test.exceptions;
-
-public class EmailValidationException extends RuntimeException {
-    public EmailValidationException(String message) {
-        super(message);
-    }
-}

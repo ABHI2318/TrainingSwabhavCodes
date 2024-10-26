@@ -1,7 +1,0 @@
-package com.aurion.state.model;
-
-public interface IOrderState {
-  public void next();
-  public void previous();
-  public void printstatus();
-}

@@ -1,6 +1,0 @@
-package com.aurion.AbstractBank.model;
-
-public interface IAccountFactory {
-	
-
-}

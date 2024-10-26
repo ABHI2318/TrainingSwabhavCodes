@@ -1,5 +1,0 @@
-package com.aurion.state.model;
-
-public class ConfirmedOrderState {
-
-}

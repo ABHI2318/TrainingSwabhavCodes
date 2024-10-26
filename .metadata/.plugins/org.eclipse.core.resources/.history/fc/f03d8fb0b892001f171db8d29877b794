@@ -1,5 +1,0 @@
-package com.aurion.observer.model;
-
-public interface INotifier {
-	public void getNotification(int accountno,double amount,String message);
-}

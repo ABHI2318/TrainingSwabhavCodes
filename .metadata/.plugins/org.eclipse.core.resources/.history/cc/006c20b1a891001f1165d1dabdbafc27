@@ -1,6 +1,0 @@
-package com.aurion.facade.model;
-
-public interface IMenu {
-	public void displaymenu();
-
-}

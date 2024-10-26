@@ -1,9 +1,0 @@
-package com.aurion.Hatdecorator.test;
-
-public class Hatmain {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

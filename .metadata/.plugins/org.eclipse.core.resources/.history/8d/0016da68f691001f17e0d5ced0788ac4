@@ -1,7 +1,0 @@
-package com.aurion.adapter.model;
-
-public abstract class HatAdapter {
-	public abstract String getName();
-	public abstract double getPrice();
-
-}

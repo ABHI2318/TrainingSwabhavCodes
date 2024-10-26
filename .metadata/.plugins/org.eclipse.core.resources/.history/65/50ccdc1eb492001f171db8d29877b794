@@ -1,8 +1,0 @@
-package com.aurion.observer.model;
-
-public interface INotifier {
-	public  String getSms();
-	public  String getwhatsapp();
-	public  String getemail();
-
-}

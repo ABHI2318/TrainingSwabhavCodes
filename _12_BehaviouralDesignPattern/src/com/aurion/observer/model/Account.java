@@ -62,7 +62,7 @@ public class Account  {
 		 setMessage("money is debited: ");
 		 return;
 	 }
-	 setMessage("Insufficient balance cannot debit ");
+	 setMessage("Insufficient balance cannot debit " );
 	 
 	 
   }

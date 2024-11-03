@@ -1,0 +1,1 @@
+Product [Product_id=1, name=ads, description=ad, quantity=2, price=1.0]

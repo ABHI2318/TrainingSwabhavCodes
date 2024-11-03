@@ -1,0 +1,1 @@
+Transaction [transaction_id=8214, product_id=1, transactionType=AddStock, quantity=1, date=Sat Nov 02 15:05:38 IST 2024]

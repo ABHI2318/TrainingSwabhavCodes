@@ -18,7 +18,7 @@ class TicTacToe {
         gameOver = false;
     }
 
-    // Starts the game (for console-based play)
+    
     public void start() {
         Scanner scanner = new Scanner(System.in);
 
@@ -45,21 +45,21 @@ class TicTacToe {
     }
 
     public boolean haveWon(char player) {
-        // Check rows
+        
         for (int row = 0; row < board.length; row++) {
             if (board[row][0] == player && board[row][1] == player && board[row][2] == player) {
                 return true;
             }
         }
 
-        // Check columns
+   
         for (int col = 0; col < board[0].length; col++) {
             if (board[0][col] == player && board[1][col] == player && board[2][col] == player) {
                 return true;
             }
         }
 
-        // Check diagonals
+       
         if (board[0][0] == player && board[1][1] == player && board[2][2] == player) {
             return true;
         }
@@ -79,17 +79,17 @@ class TicTacToe {
         }
     }
 
-    // Getter for the board, useful for testing purposes
+    
     public char[][] getBoard() {
         return board;
     }
 
-    // Getter for the current player
+    
     public char getPlayer() {
         return player;
     }
 
-    // Getter for game over status
+   
     public boolean isGameOver() {
         return gameOver;
     }

@@ -96,7 +96,6 @@ public class Inventory {
         return new ArrayList<>(suppliers.values());
     }
 
-    // Transaction Management
     public void processTransaction(int product_id, ITransactionType transactionType, int quantity)
             throws InsufficientStocksException, InvalidProductIdException {
         Product product = products.get(String.valueOf(product_id));
@@ -104,10 +103,10 @@ public class Inventory {
             throw new InvalidProductIdException("Product ID " + product_id + " does not exist.");
         }
 
-        // Apply transaction type logic
+        
         transactionType.applytranscation(product, quantity);
 
-        // Record transaction
+        
         int transaction_id = generateUniqueTransactionId();
         Transaction transaction = new Transaction(transaction_id, product_id, transactionType, quantity, new Date());
         transactions.add(transaction);
@@ -122,12 +121,12 @@ public class Inventory {
         return id;
     }
 
-    // Check if transaction ID is already used
+    
     private boolean isTransactionIdUsed(int id) {
         return transactions.stream().anyMatch(t -> t.getTransaction_id() == id);
     }
     
-    //Add this method in the Inventory class to view all transactions related to a specific product by product_id.
+    
     public List<Transaction> viewTransactionHistory(int product_id) throws InvalidProductIdException {
         if (!products.containsKey(String.valueOf(product_id))) {
             throw new InvalidProductIdException("Product ID " + product_id + " does not exist.");

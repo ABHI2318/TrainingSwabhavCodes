@@ -15,7 +15,7 @@ public class FileHandling {
     public static void saveProducts(Map<String, Product> products) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\SWABHAV_TRAINING\\SWABHAV_TRAINING\\COREJAVA\\InventoryProjectManagement\\src\\products.txt"))) {
             for (Product product : products.values()) {
-                writer.write(product.toString()); // Assumes Product has a toString() method
+                writer.write(product.toString()); 
                 writer.newLine();
             }
         } catch (IOException e) {
@@ -26,7 +26,7 @@ public class FileHandling {
     public static void saveSuppliers(Map<String, Supplier> suppliers) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\SWABHAV_TRAINING\\SWABHAV_TRAINING\\COREJAVA\\InventoryProjectManagement\\src\\suppliers.txt"))) {
             for (Supplier supplier : suppliers.values()) {
-                writer.write(supplier.toString()); // Assumes Supplier has a toString() method
+                writer.write(supplier.toString()); 
                 writer.newLine();
             }
         } catch (IOException e) {
@@ -37,7 +37,7 @@ public class FileHandling {
     public static void saveTransactions(List<Transaction> transactions) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\SWABHAV_TRAINING\\SWABHAV_TRAINING\\COREJAVA\\InventoryProjectManagement\\src\\transactions.txt"))) {
             for (Transaction transaction : transactions) {
-                writer.write(transaction.toString()); // Assumes Transaction has a toString() method
+                writer.write(transaction.toString()); 
                 writer.newLine();
             }
         } catch (IOException e) {
@@ -50,7 +50,7 @@ public class FileHandling {
         try (BufferedReader reader = new BufferedReader(new FileReader("products.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                Product product = Product.parseProduct(line); // Assuming parseProduct() exists
+                Product product = Product.parseProduct(line); 
                 products.add(product);
             }
         } catch (IOException e) {
@@ -64,7 +64,7 @@ public class FileHandling {
         try (BufferedReader reader = new BufferedReader(new FileReader("suppliers.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                Supplier supplier = Supplier.parseSupplier(line); // Assuming parseSupplier() exists
+                Supplier supplier = Supplier.parseSupplier(line);
                 suppliers.add(supplier);
             }
         } catch (IOException e) {
@@ -78,7 +78,7 @@ public class FileHandling {
         try (BufferedReader reader = new BufferedReader(new FileReader("transactions.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                Transaction transaction = Transaction.parseTransaction(line); // Assuming parseTransaction() exists
+                Transaction transaction = Transaction.parseTransaction(line); 
                 transactions.add(transaction);
             }
         } catch (IOException e) {

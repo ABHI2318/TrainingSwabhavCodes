@@ -43,8 +43,7 @@ public class InventoryApp {
             System.out.print("Choose an option: ");
             
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
-
+            scanner.nextLine();  
             switch (choice) {
                 case 1:
                     addProduct();
@@ -106,7 +105,7 @@ public class InventoryApp {
     private void addProduct() {
         System.out.print("Enter product ID: ");
         int id = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
         System.out.print("Enter product name: ");
         String name = scanner.nextLine();
         System.out.print("Enter product description: ");
@@ -128,8 +127,7 @@ public class InventoryApp {
     private void updateProduct() {
         System.out.print("Enter product ID to update: ");
         int id = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
-
+        scanner.nextLine(); 
         System.out.print("Enter new product name: ");
         String name = scanner.nextLine();
         System.out.print("Enter new product description: ");
@@ -181,7 +179,7 @@ public class InventoryApp {
     private void addSupplier() {
         System.out.print("Enter supplier ID: ");
         int id = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
         System.out.print("Enter supplier name: ");
         String name = scanner.nextLine();
         System.out.print("Enter supplier contact info: ");
@@ -199,7 +197,7 @@ public class InventoryApp {
     private void updateSupplier() {
         System.out.print("Enter supplier ID to update: ");
         int id = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine(); 
 
         System.out.print("Enter new supplier name: ");
         String name = scanner.nextLine();

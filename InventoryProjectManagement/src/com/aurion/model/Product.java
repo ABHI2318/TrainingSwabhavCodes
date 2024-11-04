@@ -1,7 +1,7 @@
 package com.aurion.model;
 
 public class Product {
- //product ID, name, description, quantity, and price
+ 
 	private int Product_id;
 	private String name;
 	private String description;
@@ -56,7 +56,7 @@ public class Product {
 		    if (parts.length != 5) {
 		        throw new IllegalArgumentException("Invalid product data: " + line);
 		    }
-		    int id = Integer.parseInt(parts[0]); // Ensure parts[0] is a valid integer string
+		    int id = Integer.parseInt(parts[0]); 
 		    String name = parts[1];
 		    String description = parts[2];
 		    int quantity = Integer.parseInt(parts[3]);

@@ -1,7 +1,7 @@
 package com.aurion.model;
 
 public class Supplier {
-//supplier ID, name, and contact information
+
 	private int supplier_id;
 	private String name;
 	private   String ContactInfo;

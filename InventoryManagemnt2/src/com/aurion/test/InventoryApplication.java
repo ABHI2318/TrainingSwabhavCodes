@@ -33,8 +33,7 @@ public class InventoryApplication {
             System.out.println("12. View Transaction History");
             System.out.println("13. Save Data");
             System.out.println("14 Generate Reports");
-            System.out.println("15. Exit");
-            
+            System.out.println("15. Exit");      
             System.out.print("Choose an option: ");
             
             int choice = scanner.nextInt();
@@ -96,7 +95,7 @@ public class InventoryApplication {
     private void addProduct() {
         System.out.print("Enter product ID: ");
         int id = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
         System.out.print("Enter product name: ");
         String name = scanner.nextLine();
         System.out.print("Enter product description: ");
@@ -119,7 +118,6 @@ public class InventoryApplication {
         System.out.print("Enter product ID to update: ");
         int id = scanner.nextInt();
         scanner.nextLine();  
-
         System.out.print("Enter new product name: ");
         String name = scanner.nextLine();
         System.out.print("Enter new product description: ");
@@ -176,7 +174,6 @@ public class InventoryApplication {
         String name = scanner.nextLine();
         System.out.print("Enter supplier contact info: ");
         String contactInfo = scanner.nextLine();
-
         Supplier supplier = new Supplier(id, name, contactInfo);
         try {
             inventory.addSupplier(supplier);

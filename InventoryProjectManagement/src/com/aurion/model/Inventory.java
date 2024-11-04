@@ -103,30 +103,30 @@ public class Inventory {
             throw new InvalidProductIdException("Product ID " + product_id + " does not exist.");
         }
 
-        // Apply transaction type logic
+       
         transactionType.applytranscation(product, quantity);
 
-        // Record transaction
+       
         int transaction_id = generateUniqueTransactionId();
         Transaction transaction = new Transaction(transaction_id, product_id, transactionType, quantity, new Date());
         transactions.add(transaction);
     }
 
-    // Generate unique transaction IDs with random generator
+  
     private int generateUniqueTransactionId() {
         int id;
         do {
-            id = random.nextInt(10000); // Generates a random ID in the range 0-9999
-        } while (isTransactionIdUsed(id)); // Check uniqueness
+            id = random.nextInt(10000); 
+        } while (isTransactionIdUsed(id));
         return id;
     }
 
-    // Check if transaction ID is already used
+   
     private boolean isTransactionIdUsed(int id) {
         return transactions.stream().anyMatch(t -> t.getTransaction_id() == id);
     }
     
-    //Add this method in the Inventory class to view all transactions related to a specific product by product_id.
+    
     public List<Transaction> viewTransactionHistory(int product_id) throws InvalidProductIdException {
         if (!products.containsKey(String.valueOf(product_id))) {
             throw new InvalidProductIdException("Product ID " + product_id + " does not exist.");

@@ -16,28 +16,55 @@ public class InventoryApp {
             scanner.nextLine();  
 
             switch (choice) {
-                case 1 -> service.addProduct(scanner);
-                case 2 -> service.updateProduct(scanner);
-                case 3 -> service.deleteProduct(scanner);
-                case 4 -> service.viewProduct(scanner);
-                case 5 -> service.viewAllProducts(); 
-                case 6 -> service.addSupplier(scanner);
-                case 7 -> service.updateSupplier(scanner);
-                case 8 -> service.deleteSupplier(scanner);
-                case 9 -> service.viewSupplierDetails(scanner);
-                case 10 -> service.viewAllSuppliers();
-                case 11 -> service.processTransaction(scanner);
-              
-                case 12 -> {
+                case 1:
+                    service.addProduct(scanner);
+                    break;
+                case 2:
+                    service.updateProduct(scanner);
+                    break;
+                case 3:
+                    service.deleteProduct(scanner);
+                    break;
+                case 4:
+                    service.viewProduct(scanner);
+                    break;
+                case 5:
+                    service.viewAllProducts();
+                    break;
+                case 6:
+                    service.addSupplier(scanner);
+                    break;
+                case 7:
+                    service.updateSupplier(scanner);
+                    break;
+                case 8:
+                    service.deleteSupplier(scanner);
+                    break;
+                case 9:
+                    service.viewSupplierDetails(scanner);
+                    break;
+                case 10:
+                    service.viewAllSuppliers();
+                    break;
+                case 11:
+                    service.processTransaction(scanner);
+                    break;
+                case 12:
                     service.viewTransactionHistory(scanner);
-                }
-                case 13 -> {
+                    break;
+                case 13:
                     service.saveData();
                     System.out.println("Data saved successfully.");
-                }
-                case 14 -> service.generateReport();
-                case 15 -> exit = true;
-                default -> System.out.println("Invalid choice. Try again.");
+                    break;
+                case 14:
+                    service.generateReport();
+                    break;
+                case 15:
+                    exit = true;
+                    break;
+                default:
+                    System.out.println("Invalid choice. Try again.");
+                    break;
             }
         }
 
@@ -58,8 +85,8 @@ public class InventoryApp {
         System.out.println("9. View Supplier Details");
         System.out.println("10. View All Suppliers");
         System.out.println("11. Process Transaction");
-        System.out.println("12. view Transaction History ");
-        System.out.println("13. Save data ");
+        System.out.println("12. View Transaction History");
+        System.out.println("13. Save Data");
         System.out.println("14. Generate Report");
         System.out.println("15. Exit");
         System.out.print("Enter your choice: ");

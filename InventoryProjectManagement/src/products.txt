@@ -1,1 +1,7 @@
-Product [Product_id=12, name=sdv, description=wdqs, quantity=2, price=3.0]
+Product [Product_id=200, name=maggie, description=toeat, quantity=20, price=280.0]
+Product [Product_id=200, name=Maggie, description=toeat, quantity=27, price=405.0]
+Product [Product_id=200, name=Maggie, description=toeat, quantity=27, price=405.0]
+Product [Product_id=201, name=Munch, description=tosnack, quantity=10, price=50.0]
+Product [Product_id=200, name=Maggie, description=toeat, quantity=27, price=405.0]
+Product [Product_id=201, name=Munch, description=tosnack, quantity=10, price=50.0]
+Product [Product_id=202, name=Kurkure, description=toenjoy, quantity=10, price=200.0]

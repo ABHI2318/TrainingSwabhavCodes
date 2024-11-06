@@ -57,13 +57,17 @@ public class Transaction {
 	}
 	public static Transaction parseTransaction(String data) throws ParseException {
 		   String[] fields = data.split(",");
+	        
+	       
 	        int transaction_id = Integer.parseInt(fields[0].trim());
 	        int product_id = Integer.parseInt(fields[1].trim());
 	        int transactionTypeId = Integer.parseInt(fields[2].trim());
 	        int quantity = Integer.parseInt(fields[3].trim());
 	        Date date = dateFormat.parse(fields[4].trim());
 	        ITransactionType transactionType = TransactionTypeFactory.getTransactionType(transactionTypeId);
-	       return new Transaction(transaction_id, product_id, transactionType, quantity, date);
+	        
+	       
+	        return new Transaction(transaction_id, product_id, transactionType, quantity, date);
 	}
 	@Override
 	public String toString() {

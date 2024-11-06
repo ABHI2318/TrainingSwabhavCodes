@@ -13,6 +13,7 @@ import com.aurion.exceptions.InsufficientStocksException;
 import com.aurion.exceptions.InvalidProductIdException;
 import com.aurion.exceptions.InvalidSupplierIdException;
 import com.aurion.handling.FileHandling;
+import com.aurion.exceptions.FileProcessingException;
 
 public class Inventory {
     private Map<String, Product> products;
@@ -35,11 +36,11 @@ public class Inventory {
         products.put(String.valueOf(product.getProduct_id()), product);
     }
 
-    public void updateProduct(int product_id, Product updateProduct) throws InvalidProductIdException {
+    public void updateProduct(int product_id, Product updatedProduct) throws InvalidProductIdException {
         if (!products.containsKey(String.valueOf(product_id))) {
             throw new InvalidProductIdException("Product ID " + product_id + " does not exist.");
         }
-        products.put(String.valueOf(product_id), updateProduct);
+        products.put(String.valueOf(product_id), updatedProduct);
     }
 
     public void deleteProduct(int product_id) throws InvalidProductIdException {
@@ -69,11 +70,11 @@ public class Inventory {
         suppliers.put(String.valueOf(supplier.getSupplier_id()), supplier);
     }
 
-    public void updateSupplier(int supplier_id, Supplier updateSupplier) throws InvalidSupplierIdException {
+    public void updateSupplier(int supplier_id, Supplier updatedSupplier) throws InvalidSupplierIdException {
         if (!suppliers.containsKey(String.valueOf(supplier_id))) {
             throw new InvalidSupplierIdException("Supplier ID " + supplier_id + " does not exist.");
         }
-        suppliers.put(String.valueOf(supplier_id), updateSupplier);
+        suppliers.put(String.valueOf(supplier_id), updatedSupplier);
     }
 
     public void deleteSupplier(int supplier_id) throws InvalidSupplierIdException {
@@ -103,54 +104,68 @@ public class Inventory {
             throw new InvalidProductIdException("Product ID " + product_id + " does not exist.");
         }
 
-       
+        
         transactionType.applytranscation(product, quantity);
 
-       
+        
         int transaction_id = generateUniqueTransactionId();
         Transaction transaction = new Transaction(transaction_id, product_id, transactionType, quantity, new Date());
         transactions.add(transaction);
     }
 
-  
+    
     private int generateUniqueTransactionId() {
         int id;
         do {
-            id = random.nextInt(10000); 
+            id = random.nextInt(10000);
         } while (isTransactionIdUsed(id));
         return id;
     }
 
-   
+    
     private boolean isTransactionIdUsed(int id) {
         return transactions.stream().anyMatch(t -> t.getTransaction_id() == id);
     }
-    
-    
+
+    // Views transaction history for a specific product ID
     public List<Transaction> viewTransactionHistory(int product_id) throws InvalidProductIdException {
         if (!products.containsKey(String.valueOf(product_id))) {
             throw new InvalidProductIdException("Product ID " + product_id + " does not exist.");
         }
-        
+
         List<Transaction> productTransactions = new ArrayList<>();
         for (Transaction transaction : transactions) {
             if (transaction.getProduct_id() == product_id) {
                 productTransactions.add(transaction);
             }
         }
-        
+
         return productTransactions;
     }
-    
+
+   
     public void saveData() {
-    	FileHandling.saveData(products, suppliers, transactions);
+        FileHandling fileHandling = new FileHandling();
+        fileHandling.saveData(
+            new ArrayList<>(products.values()), 
+            new ArrayList<>(suppliers.values()), 
+            transactions
+        );
     }
-    
+
     public void loadData() {
-    	FileHandling.loadData(products, suppliers, transactions);
+        FileHandling fileHandling = new FileHandling();
+        Map<String, Product> loadedProducts = fileHandling.loadProducts();
+        for (Product product : loadedProducts.values()) {
+            try {
+                addProduct(product); 
+            } catch (DuplicateProductException e) {
+                System.out.println(e.getMessage()); 
+            }
+        }
     }
+
     
-    // Accessor methods for FileHandling
     public Map<String, Product> getProducts() {
         return products;
     }
@@ -174,5 +189,4 @@ public class Inventory {
     public void setTransactions(List<Transaction> transactions) {
         this.transactions = transactions;
     }
-
 }

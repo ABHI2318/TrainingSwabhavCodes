@@ -96,7 +96,7 @@ public class Inventory {
         return new ArrayList<>(suppliers.values());
     }
 
-    // Transaction Management
+   
     public void processTransaction(int product_id, ITransactionType transactionType, int quantity)
             throws InsufficientStocksException, InvalidProductIdException {
         Product product = products.get(String.valueOf(product_id));
@@ -127,7 +127,7 @@ public class Inventory {
         return transactions.stream().anyMatch(t -> t.getTransaction_id() == id);
     }
 
-    // Views transaction history for a specific product ID
+   
     public List<Transaction> viewTransactionHistory(int product_id) throws InvalidProductIdException {
         if (!products.containsKey(String.valueOf(product_id))) {
             throw new InvalidProductIdException("Product ID " + product_id + " does not exist.");
